@@ -48,13 +48,3 @@ SET(CPACK_PACKAGE_EXECUTABLES "hdutil" "Apple disk image utility")
 SET(CPACK_PACKAGE_EXECUTABLES "dmg" "Apple DMG utility")
 SET(CPACK_PACKAGE_EXECUTABLES "hfsplus" "Apple HFS+ utility")
 INCLUDE(CPack)
-
-
-set(CMAKE_OSX_SYSROOT iphoneos3.1.3)
-set(CMAKE_OSX_ARCHITECTURES $(ARCHS_STANDARD_32_BIT))
-set(CMAKE_CXX_FLAGS "-x objective-c++")
-set(CMAKE_EXE_LINKER_FLAGS
-    "-framework AudioToolbox -framework CoreGraphics -framework QuartzCore -framework UIKit"
-)
-link_directories(\${HOME}/\${SDKROOT}/lib)
-
